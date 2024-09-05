@@ -13,10 +13,14 @@
         <input type="text" name="nombre"><br>
 
         <label for= "correo">Correo:</label<br>
-        <input type="text" name="correo"><br>
+        <input type="text" name="correo">
+        @error('correo')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+        <br>
 
         <label for= "mensaje">Mensaje:</label<br>
-        <textarea type="text" name="mensaje"></textarea><br>
+        <textarea type="text" cols='30' rows='4' name="mensaje"></textarea><br>
 
         <input type="submit" value="Enviar">
 
