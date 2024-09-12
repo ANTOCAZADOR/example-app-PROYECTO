@@ -34,8 +34,8 @@ class ContactoController extends Controller
         //validar datos 
         $request->validate([
             'nombre'=> 'required|min:3|max:255',
-            'mensaje'=> 'required|email',
-            'correo'=> ['required', 'min: 10'],
+            'mensaje'=> 'required|min: 10',
+            'correo'=> 'required|email',
         ]);
 
         //guardar datos
